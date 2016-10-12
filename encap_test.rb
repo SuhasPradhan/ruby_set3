@@ -52,7 +52,7 @@ class User < Message
 		puts "Welcome User"
 	end
 
-	def sendSecureMessage
+	def self.sendSecureMessage
 		secureChat("This is confidential")
 	end
 
@@ -64,4 +64,7 @@ end
 
 
 client = User.new
+client.groupChat("Hi friends")
+client.sendPersonalMessage
+# client.sendSecureMessage	
 

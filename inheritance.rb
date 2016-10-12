@@ -26,46 +26,56 @@
 # 									India
 
 
-class Country
-	def initialize
-		puts "This is the Country."
-	end
+class Address
+	# def initialize
+	# 	puts "This is the Country."
+	# end
 
 	def countryName 
-	 # give the country name.
+	 @country="India"
+	 return @country
 	end
-end
-
-class City
-	def initialize
-		puts "This is the City"
+# class City
+	def cityName
+		@city="Mysore"
+		return @city
 	end
-
-	# define cityName  --> give the city name
-end
-
-
-class Address < Country
-	def initialize
-		puts "This is my address."
+	def homeAdress
+		@ha="#96, Railway Layout, Vijaynagar"
 	end
 
 	# define completeAddress --> complete address. 
 
 end
 
-class Number < City
+class FullAddress < Address
 	def initialize
 		puts "This is my address."
 	end
-
+	def countryname
+		puts "Country name is"
+		puts countryName
+	end
+	def cityname
+		puts "City name is"
+		puts cityName
+	end
+	def homeaddress
+		puts "Residential address is"
+		puts homeAdress
+	end
 	# define streetAddress --> '#96, Railway Layout, Vijaynagar'
 
 	def completeAddress
-		puts streetAddress cityName countryName 
+		puts "My complete address is "
+		puts "#{@ha}, #{@city}, #{@country}"
 	end
 end
 
-
+a=FullAddress.new
+a.countryname
+a.cityname
+a.homeaddress
+a.completeAddress
 
 # instantiate a object and check for all address.

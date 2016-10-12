@@ -21,7 +21,7 @@ puts "3)"
 puts "enter a number"
 a=gets.to_i
 if a.even?
-	puts "Even"
+	puts "#{a} is Even"
 else
-	puts "Odd"
+	puts "#{a} is Odd"
 end

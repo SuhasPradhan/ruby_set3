@@ -1,7 +1,9 @@
 def divide(number, divisor)
   begin
-    answer = number / divisor
+   puts answer = number / divisor
+	rescue => e
   # Handle the exception based on the parameter
+  	puts "Error"
     puts e.message
   end
 end
